@@ -1,0 +1,5 @@
+*.rar
+**/_dev
+**/.sass-cache
+**/sass
+*.jpg

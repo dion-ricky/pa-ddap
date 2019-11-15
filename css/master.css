@@ -37,6 +37,84 @@ div.hr {
   height: 6px;
   border-radius: .5%/50%; }
 
+#overrideBs.slideshow {
+  /* Slideshow container */
+  /* Hide the images by default */
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* On hover, add a black background color with a little bit see-through */
+  /* Caption text */
+  /* Number text (1/3 etc) */
+  /* The dots/bullets/indicators */
+  /* Fading animation */ }
+  #overrideBs.slideshow * {
+    box-sizing: border-box; }
+  #overrideBs.slideshow .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto; }
+  #overrideBs.slideshow .mySlides {
+    display: none; }
+  #overrideBs.slideshow .prev, #overrideBs.slideshow .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none; }
+  #overrideBs.slideshow .next {
+    right: 0;
+    border-radius: 3px 0 0 3px; }
+  #overrideBs.slideshow .prev:hover, #overrideBs.slideshow .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); }
+  #overrideBs.slideshow .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center; }
+  #overrideBs.slideshow .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0; }
+  #overrideBs.slideshow .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease; }
+  #overrideBs.slideshow .active, #overrideBs.slideshow .dot:hover {
+    background-color: #717171; }
+  #overrideBs.slideshow .fade {
+    opacity: inherit; }
+  #overrideBs.slideshow .fade {
+    -webkit-animation-name: sh-fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: sh-fade;
+    animation-duration: 1.5s; }
+@-webkit-keyframes sh-fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+@keyframes sh-fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
 .flex {
   display: flex; }
 
