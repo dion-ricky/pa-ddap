@@ -54,14 +54,9 @@ div.hr {
   font-weight: 700;
   margin-top: 1rem; }
   .home-menu ul {
-    list-style: none;
-    display: flex;
-    flex-flow: row; }
+    list-style: none; }
   .home-menu li {
     margin-right: 2rem; }
-    .home-menu li a {
-      display: flex;
-      flex-flow: row nowrap; }
     .home-menu li a:hover .menu-line {
       opacity: 1;
       max-width: 100%; }
@@ -91,6 +86,15 @@ main {
 
 .flex-col {
   flex-flow: column nowrap; }
+
+.product-wrapper {
+  border-radius: 10px;
+  transition: .25s; }
+
+.product-wrapper:hover {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.25);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.25);
+  box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.25); }
 
 footer {
   margin-top: auto;
