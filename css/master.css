@@ -1,9 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
 html, body {
-  font-family: 'Montserrat', 'sans-serif' !important; }
+  font-family: 'Montserrat', 'sans-serif' !important;
+  scroll-behavior: smooth; }
+
+::selection {
+  background: #eee; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #fccc92; }
+  color: #EC4746; }
 
 #overrideBs a, #overrideBs a:link, #overrideBs a:visited, #overrideBs a:hover, #overrideBs a:active, #overrideBs a:focus {
   color: inherit;
@@ -16,7 +20,12 @@ nav#navOverrideBs {
   width: 100%;
   z-index: 99;
   flex-flow: column;
-  transition: .25s; }
+  transition: .25s;
+  background: #fbb560;
+  background: -moz-linear-gradient(0deg, #fbb560 -150%, #ec4746 100%);
+  background: -webkit-linear-gradient(0deg, #fbb560 -150%, #ec4746 100%);
+  background: linear-gradient(0deg, #fbb560 -190%, #ec4746 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fbb560",endColorstr="#ec4746",GradientType=1); }
   nav#navOverrideBs li.nav-item a.nav-link {
     color: #fff;
     padding: .1rem .75rem;
@@ -51,6 +60,9 @@ div.hr {
     .home-menu li a:hover .menu-line {
       opacity: 1;
       max-width: 100%; }
+    .home-menu li a.active .menu-line {
+      opacity: 1;
+      max-width: 100%; }
   .home-menu .menu-img {
     max-width: 35px; }
   .home-menu .menu-text {
@@ -66,6 +78,9 @@ div.hr {
     border-radius: 2.5%/50%;
     transition: opacity .25s, max-width .25s ease-out; }
 
+main {
+  padding-top: 10.5rem; }
+
 .flex {
   display: flex; }
 
@@ -75,14 +90,37 @@ div.hr {
 .flex-col {
   flex-flow: column nowrap; }
 
-.product-wrapper {
+td.product-wrapper {
   border-radius: 10px;
-  transition: .25s; }
+  transition: .25s;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(51, 51, 51, 0.25);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(51, 51, 51, 0.25);
+  box-shadow: 0px 0px 5px 0px rgba(51, 51, 51, 0.25); }
 
-.product-wrapper:hover {
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.25);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.25);
-  box-shadow: 0px 0px 10px 0px rgba(51, 51, 51, 0.25); }
+td.product-wrapper:hover {
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(51, 51, 51, 0.25);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(51, 51, 51, 0.25);
+  box-shadow: 0px 5px 10px 0px rgba(51, 51, 51, 0.25); }
+
+div.product-wrapper {
+  margin: .5rem; }
+
+table.product-table {
+  border-collapse: unset;
+  border-spacing: 15px 0;
+  margin: 1rem 0 2rem 0; }
+
+.image-container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 250px;
+  height: 250px;
+  border-radius: 2.5%;
+  margin-right: 1rem; }
+
+.image-container.mini {
+  width: 150px;
+  height: 150px; }
 
 footer {
   margin-top: auto;
@@ -98,7 +136,6 @@ footer {
 #overrideBs.slideshow * {
   box-sizing: border-box; }
 #overrideBs.slideshow .slideshow-container {
-  max-width: 1000px;
   position: relative;
   margin: auto; }
 #overrideBs.slideshow .slideshow-container:hover .prev, #overrideBs.slideshow .slideshow-container:hover .next {
@@ -155,12 +192,5 @@ footer {
     opacity: .4; }
   to {
     opacity: 1; } }
-.home-slideshow {
-  padding-top: 12rem;
-  background: #fbb560;
-  background: -moz-linear-gradient(0deg, #fbb560 0%, #ec4746 100%);
-  background: -webkit-linear-gradient(0deg, #fbb560 0%, #ec4746 100%);
-  background: linear-gradient(0deg, #fbb560 0%, #ec4746 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fbb560",endColorstr="#ec4746",GradientType=1); }
 
 /*# sourceMappingURL=master.css.map */

@@ -1,5 +1,63 @@
-window.onscroll = function() {
-  var scroll = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
-  document.getElementById("navOverrideBs").style = "background: linear-gradient(0deg, rgba(251,181,96,"+ (scroll/scroll) +") -200%, rgba(236,71,70,"+ (scroll/scroll) +") 100%)";
-  document.getElementById("homeSlideshow").style = "background: linear-gradient(0deg, rgba(251,181,96,"+(1 - (scroll / 100))+") 0%, rgba(236,71,70,"+(1 - (scroll / 100))+") 100%)";
-};
+$(window).on('scroll', function(e) {
+  activateMenu();
+});
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      console.log(hash);
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top - 200
+      }, 500, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        // window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+function activateMenu() {
+  var list = document.getElementsByTagName('h2');
+  var listMenu = document.getElementsByTagName('a');
+  Array.prototype.forEach.call(list, function(el){
+    if (isScrolledIntoView(el)) {
+      Array.prototype.forEach.call(listMenu, function(menu) {
+        if (menu.getAttribute("href") == "#"+el.id) {
+          console.log(menu);
+          menu.classList.add('active');
+        }
+      });
+    } else {
+      Array.prototype.forEach.call(listMenu, function(menu) {
+        if (menu.getAttribute("href") == "#"+el.id) {
+          console.log(menu);
+          menu.classList.remove('active');
+        }
+      });
+    }
+  });
+}
+
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
