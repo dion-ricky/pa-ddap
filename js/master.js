@@ -36,14 +36,12 @@ function activateMenu() {
     if (isScrolledIntoView(el)) {
       Array.prototype.forEach.call(listMenu, function(menu) {
         if (menu.getAttribute("href") == "#"+el.id) {
-          console.log(menu);
           menu.classList.add('active');
         }
       });
     } else {
       Array.prototype.forEach.call(listMenu, function(menu) {
         if (menu.getAttribute("href") == "#"+el.id) {
-          console.log(menu);
           menu.classList.remove('active');
         }
       });
@@ -53,11 +51,19 @@ function activateMenu() {
 
 function isScrolledIntoView(elem)
 {
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
+    var docViewTop = $(window).scrollTop() + 150;
+    var docViewBottom = docViewTop + $(window).height() - 150;
 
     var elemTop = $(elem).offset().top;
     var elemBottom = elemTop + $(elem).height();
 
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
+
+$(function () {
+  'use strict'
+
+  $('[data-toggle="offcanvas"]').on('click', function () {
+    $('.offcanvas-collapse').toggleClass('open')
+  })
+})
