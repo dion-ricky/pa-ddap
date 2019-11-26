@@ -1,49 +1,72 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
 html, body {
-  font-family: 'Montserrat', 'sans-serif' !important; }
+  font-family: 'Montserrat', 'sans-serif' !important;
+  scroll-behavior: smooth;
+  overflow-x: hidden; }
+
+::selection {
+  background: #eee; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #fccc92; }
+  color: #EC4746; }
 
 #overrideBs a, #overrideBs a:link, #overrideBs a:visited, #overrideBs a:hover, #overrideBs a:active, #overrideBs a:focus {
   color: inherit;
   text-decoration: none; }
 
-nav#overrideBs {
-  background: #fbb560;
-  background: -moz-linear-gradient(0deg, #fbb560 0%, #ec4746 100%);
-  background: -webkit-linear-gradient(0deg, #fbb560 0%, #ec4746 100%);
-  background: linear-gradient(0deg, #fbb560 0%, #ec4746 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fbb560",endColorstr="#ec4746",GradientType=1);
+nav#navOverrideBs {
   color: #fff;
   font-size: .85rem;
   position: fixed;
   width: 100%;
   z-index: 99;
-  flex-flow: column; }
+  flex-flow: column;
+  transition: .25s;
+  background: #fbb560;
+  background: -moz-linear-gradient(0deg, #fbb560 -150%, #ec4746 100%);
+  background: -webkit-linear-gradient(0deg, #fbb560 -150%, #ec4746 100%);
+  background: linear-gradient(0deg, #fbb560 -190%, #ec4746 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fbb560",endColorstr="#ec4746",GradientType=1); }
+  nav#navOverrideBs li.nav-item a.nav-link {
+    color: #fff;
+    padding: .1rem .75rem;
+    border-radius: 15px/50%;
+    transition: .15s ease-out; }
+  nav#navOverrideBs li.nav-item a.nav-link:hover {
+    color: #EC4746;
+    background: white;
+    box-shadow: 2.5px 2px 2px #EE3A2E; }
+  nav#navOverrideBs li.nav-item.active a.nav-link {
+    color: #EC4746;
+    background: white;
+    box-shadow: 5px 4px 2px #EC4746;
+    font-weight: 700; }
 
 .nav-item {
   margin: 0 1rem; }
 
-#overrideBs
-li.nav-item a.nav-link {
-  color: #fff;
-  padding: .1rem .75rem;
-  border-radius: 15px/50%;
-  transition: .15s ease-out; }
-#overrideBs
-li.nav-item a.nav-link:hover {
-  color: #EC4746;
-  background: white;
-  box-shadow: 2.5px 2px 2px #EE3A2E; }
+@media (max-width: 991.98px) {
+  .offcanvas-collapse {
+    position: fixed;
+    top: 80.75px;
+    /* Height of navbar */
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    max-width: 50%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #343a40;
+    transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out; }
 
-#overrideBs
-li.nav-item.active a.nav-link {
-  color: #EC4746;
-  background: white;
-  box-shadow: 5px 4px 2px #EC4746;
-  font-weight: 700; }
-
+  .offcanvas-collapse.open {
+    visibility: visible;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%); } }
 div.hr {
   background: #fff;
   height: 4px;
@@ -54,15 +77,13 @@ div.hr {
   font-weight: 700;
   margin-top: 1rem; }
   .home-menu ul {
-    list-style: none;
-    display: flex;
-    flex-flow: row; }
+    list-style: none; }
   .home-menu li {
     margin-right: 2rem; }
-    .home-menu li a {
-      display: flex;
-      flex-flow: row nowrap; }
     .home-menu li a:hover .menu-line {
+      opacity: 1;
+      max-width: 100%; }
+    .home-menu li a.active .menu-line {
       opacity: 1;
       max-width: 100%; }
   .home-menu .menu-img {
@@ -81,7 +102,7 @@ div.hr {
     transition: opacity .25s, max-width .25s ease-out; }
 
 main {
-  padding-top: 10rem; }
+  padding-top: 10.5rem; }
 
 .flex {
   display: flex; }
@@ -91,6 +112,38 @@ main {
 
 .flex-col {
   flex-flow: column nowrap; }
+
+td.product-wrapper {
+  border-radius: 10px;
+  transition: .25s;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(51, 51, 51, 0.25);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(51, 51, 51, 0.25);
+  box-shadow: 0px 0px 5px 0px rgba(51, 51, 51, 0.25); }
+
+td.product-wrapper:hover {
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(51, 51, 51, 0.25);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(51, 51, 51, 0.25);
+  box-shadow: 0px 5px 10px 0px rgba(51, 51, 51, 0.25); }
+
+div.product-wrapper {
+  margin: .5rem; }
+
+table.product-table {
+  border-collapse: unset;
+  border-spacing: 15px 0;
+  margin: 1rem 0 2rem 0; }
+
+.image-container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 250px;
+  height: 250px;
+  border-radius: 2.5%;
+  margin-right: 1rem; }
+
+.image-container.mini {
+  width: 150px;
+  height: 150px; }
 
 footer {
   margin-top: auto;
@@ -106,9 +159,10 @@ footer {
 #overrideBs.slideshow * {
   box-sizing: border-box; }
 #overrideBs.slideshow .slideshow-container {
-  max-width: 1000px;
   position: relative;
   margin: auto; }
+#overrideBs.slideshow .slideshow-container:hover .prev, #overrideBs.slideshow .slideshow-container:hover .next {
+  opacity: 1; }
 #overrideBs.slideshow .mySlides {
   display: none; }
 #overrideBs.slideshow .prev, #overrideBs.slideshow .next {
@@ -123,7 +177,8 @@ footer {
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
-  user-select: none; }
+  user-select: none;
+  opacity: 0; }
 #overrideBs.slideshow .next {
   right: 0;
   border-radius: 3px 0 0 3px; }
@@ -131,22 +186,25 @@ footer {
   background-color: rgba(0, 0, 0, 0.8); }
 #overrideBs.slideshow .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 10px;
+  width: 10px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: #fff;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease; }
+  transition: background-color 0.25s ease-out, width 0.4s ease, border-radius .25s; }
 #overrideBs.slideshow .active, #overrideBs.slideshow .dot:hover {
-  background-color: #717171; }
+  background-color: #EC4746; }
+#overrideBs.slideshow .active {
+  width: 30px;
+  border-radius: 6px/50%; }
 #overrideBs.slideshow .fade {
   opacity: inherit; }
 #overrideBs.slideshow .fade {
   -webkit-animation-name: sh-fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: .75s;
   animation-name: sh-fade;
-  animation-duration: 1.5s; }
+  animation-duration: .75s; }
 @-webkit-keyframes sh-fade {
   from {
     opacity: .4; }
