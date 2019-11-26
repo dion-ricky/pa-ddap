@@ -1,0 +1,16 @@
+.tulisan order{
+    font-family: Roboto, 'sans-serif';
+    color: #fff;
+}
+.kotak order{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    padding: .25em 0;
+}
+.pilihanKota{
+   
+}
+.pilihanJenisOrder{
+    
+}
