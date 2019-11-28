@@ -51,8 +51,8 @@ function activateMenu() {
 
 function isScrolledIntoView(elem)
 {
-    var docViewTop = $(window).scrollTop() + 150;
-    var docViewBottom = docViewTop + $(window).height() - 150;
+    var docViewTop = $(window).scrollTop() + 75;
+    var docViewBottom = docViewTop + $(window).height() - 75;
 
     var elemTop = $(elem).offset().top;
     var elemBottom = elemTop + $(elem).height();
