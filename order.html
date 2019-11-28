@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order Online</title>
+  <link rel="stylesheet" href="./order.css">
+  <link rel="stylesheet" href="./css/master.css">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="./js/bootstrap.min.js" charset="utf-8"></script>
+  <script src="./js/master.js" charset="utf-8"></script>
+</head>
+<body class="flex flex-col">
+
+  <nav id="navOverrideBs" class="navbar navbar-expand-lg navbar-dark">
+    <div class="container" style="margin: 1rem 0;">
+      <a class="navbar-brand" href="./">
+        <img src="./assets/logo.png" alt="Logo" style="max-width: 200px">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: flex-end;">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Beranda <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Order Online</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Lokasi</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <header id = "main-content" class= "judul">
+    <h1 align = "left"> Form Order Online</h1>
+    <p>Anda dapat mengisi Form ini untuk Order</p>
+  </header>
+  <br>
+  <!--input-->
+  <div class="content">
+    <p>
+
+      <input type = "text" name = "nama" placeholder="Nama lengkap" size = 12 maxlength="28" >
+
+      <input type = "text" name = "no HP"placeholder="no HP" size = 12 maxlength="28">
+    </p>
+    <p>
+
+      <input type="email" required name = "email" placeholder="E-mail"size = 12 maxlength="28">
+    </p>
+    <p>
+
+      <input type = "text" name = "Alamat" placeholder="Alamat"size = 12 maxlength="28">
+    </p>
+
+    <div class="pilihanKota">
+      <label>kota:</label>
+      <select name="Kota">
+        <option value="Surabaya">Surabaya</option>
+        <option value="Malang">Malang</option>
+        <option value="Sidoarjo">Sidoarjo</option>
+        <option value="Blitar">Blitar</option>
+      </select>
+    </div>
+    <br>
+
+    <div class="pilihanJenisOrder">
+      <label>Jenis Order:</label>
+      <select name="Jenis">
+        <option value="Keripik buah">Keripik buah</option>
+        <option value="Keripik Tempe">Keripik Tempe</option>
+        <option value="Keripik Umbi">Keripik Umbi</option>
+        <option value="Kerupuk">Kerupuk</option>
+        <option value="Kue Kering">Kue Kering</option>
+        <option value="Dodol Buah">Dodol Buah</option>
+      </select>
+
+    </div>
+
+    <p>
+
+      <input type = "number" name = "Jumlah Order" placeholder="Jumlah Order"size = 12 maxlength="28">
+    </p>
+  </div>
+  <footer id="overrideBs">
+    <div class="container">
+      <a href="./">
+        <img src="./assets/logo.png" style="max-width: 150px" alt="Logo">
+      </a>
+    </div>
+    <div class="container flex flex-row">
+      <div class="col-md">
+        <h4>Kontak</h4>
+        <ul>
+          <li>
+            <a href="#">0829819291</a>
+          </li>
+          <li>
+            <a href="#">0829819291</a>
+          </li>
+          <li>
+            <a href="#">0829819291</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md">
+        test2
+      </div>
+      <div class="col-md">
+        <span>Made with &#10084; by Kelompok 3 DDAP SI-E</span>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/slideshow.js" charset="utf-8"></script>
+</body>
+</html>
