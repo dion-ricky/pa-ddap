@@ -67,3 +67,8 @@ $(function () {
     $('.offcanvas-collapse').toggleClass('open')
   })
 })
+
+$("#jenis").on('change', function() {
+  var x = this.val;
+  alert(x);
+});

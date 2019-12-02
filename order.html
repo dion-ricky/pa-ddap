@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Order Online</title>
-  <link rel="stylesheet" href="./order.css">
+  <link rel="stylesheet" href="./css/order.css">
   <link rel="stylesheet" href="./css/master.css">
   <link rel="stylesheet" href="./css/bootstrap.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -35,9 +35,12 @@
     </div>
   </nav>
   <br>
+  <main>
+
+  <div class="container">
   <header id = "main-content" class= "judul">
-    <h1 align = "left"> Form Order Online</h1>
-    <p>Anda dapat mengisi Form ini untuk Order</p>
+    <h1 align = "center"> Form Order Online</h1>
+    <p align = "center">Anda dapat mengisi Form ini untuk Order</p>
   </header>
   <br>
   <!--input-->
@@ -64,7 +67,7 @@
     <br>
     <div class="pilihanJenisOrder">
       <label>Jenis Order:</label>
-      <select name="Jenis">
+      <select name="Jenis" id="jenis">
         <option value="20000">Keripik Pisang Original</option>
         <option value="25000">Keripik Pisang Coklat</option>
         <option value="25000">Keripik Pisang Balado</option>
@@ -77,10 +80,13 @@
       </select>
     </div>
     <p>
-      <input type = "number" name = "Jumlah Order" placeholder="Jumlah Order"size = 12 maxlength="28" min="0" value="0">
-      <span id='total'></span>
+
+      <input type = "number" id="jmlOrder" name = "Jumlah Order" placeholder="Jumlah Order"size = 12 maxlength="28">
+      <span id="total"></span>
     </p>
   </div>
+  </div>
+  </main>
   <footer id="overrideBs">
     <div class="container">
       <a href="./">
