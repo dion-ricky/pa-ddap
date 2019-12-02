@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Order Online</title>
-  <link rel="stylesheet" href="./order.css">
+  <link rel="stylesheet" href="./css/order.css">
   <link rel="stylesheet" href="./css/master.css">
   <link rel="stylesheet" href="./css/bootstrap.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -36,16 +36,21 @@
     </div>
   </nav>
   <br>
+  <main>
+
+  <div class="container">
   <header id = "main-content" class= "judul">
-    <h1 align = "left"> Form Order Online</h1>
-    <p>Anda dapat mengisi Form ini untuk Order</p>
+    <h1 align = "center"> Form Order Online</h1>
+    <p align = "center">Anda dapat mengisi Form ini untuk Order</p>
   </header>
   <br>
   <!--input-->
   <div class="content">
     <p>
 
-      <input type = "text" name = "nama" placeholder="Nama lengkap" size = 12 maxlength="28" >
+      <input type = "text" name = "nama" placeholder="Nama lengkap" size = 12 maxlength="28" style="margin-right: 0.5rem;" >
+    </p>
+    <p>
 
       <input type = "text" name = "no HP"placeholder="no HP" size = 12 maxlength="28">
     </p>
@@ -71,22 +76,27 @@
 
     <div class="pilihanJenisOrder">
       <label>Jenis Order:</label>
-      <select name="Jenis">
-        <option value="Keripik buah">Keripik buah</option>
-        <option value="Keripik Tempe">Keripik Tempe</option>
-        <option value="Keripik Umbi">Keripik Umbi</option>
-        <option value="Kerupuk">Kerupuk</option>
-        <option value="Kue Kering">Kue Kering</option>
-        <option value="Dodol Buah">Dodol Buah</option>
+      <select name="Jenis" id="jenis">
+        <option value="20000">Keripik Pisang Original</option>
+        <option value="25000">Keripik Pisang Coklat</option>
+        <option value="25000">Keripik Pisang Balado</option>
+        <option value="10000">Keripik Tempe Original</option>
+        <option value="15000">Keripik Tempe Udang</option>
+        <option value="15000">Keripik Tempe Jagung Manis </option>
+        <option value="15000">Keripik Umbi Original </option>
+        <option value="20000">Keripik Umbi Ungu </option>
+        <option value="20000">Keripik Umbi Keju </option>
       </select>
 
     </div>
 
     <p>
 
-      <input type = "number" name = "Jumlah Order" placeholder="Jumlah Order"size = 12 maxlength="28">
+      <input type = "number" id="jmlOrder" name = "Jumlah Order" placeholder="Jumlah Order"size = 12 maxlength="28">
     </p>
   </div>
+  </div>
+  </main>
   <footer id="overrideBs">
     <div class="container">
       <a href="./">
