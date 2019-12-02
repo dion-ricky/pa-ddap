@@ -8,6 +8,9 @@ html, body {
   color: inherit;
   text-decoration: none; }
 
+  .lokasi img {
+      vertical-align: baseline;
+  }
 
 h2, h5, h6 {
     color: #000 !important;
@@ -19,25 +22,12 @@ h4{
 }
 
 #main-content.judul{
-    padding-top: 120px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 115px;
     padding-left: 115px;
 }
-.lokasi1{
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 115px;
-    padding-left: 115px;
-}
-.lokasi2{
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 115px;
-    padding-left: 115px;
-}
-.lokasi3{
+.lokasi{
     margin-right: auto;
     margin-left: auto;
     padding-right: 115px;
