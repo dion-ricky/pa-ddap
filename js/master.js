@@ -1,8 +1,8 @@
-$(window).on('scroll', function(e) {
-  activateMenu();
-});
-
 $(document).ready(function(){
+  $(window).on('scroll', function(e) {
+    activateMenu();
+  });
+
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {
 
@@ -51,13 +51,17 @@ function activateMenu() {
 
 function isScrolledIntoView(elem)
 {
-    var docViewTop = $(window).scrollTop() + 75;
-    var docViewBottom = docViewTop + $(window).height() - 75;
+  var docViewTop = $(window).scrollTop() + 75;
+  var docViewBottom = docViewTop + $(window).height() - 75;
 
-    var elemTop = $(elem).offset().top;
-    var elemBottom = elemTop + $(elem).height();
+  var elemTop = $(elem).offset().top;
+  var elemBottom = elemTop + $(elem).height();
 
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+  return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+function changeLocation(el) {
+  window.location = el.getAttribute("href");
 }
 
 $(function () {
@@ -67,8 +71,3 @@ $(function () {
     $('.offcanvas-collapse').toggleClass('open')
   })
 })
-
-$("#jenis").on('change', function() {
-  var x = this.val;
-  alert(x);
-});

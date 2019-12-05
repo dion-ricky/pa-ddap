@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no">
   <title>Order Online</title>
   <link rel="stylesheet" href="./css/order.css">
   <link rel="stylesheet" href="./css/master.css">
@@ -11,15 +13,15 @@
   <script src="./js/master.js" charset="utf-8"></script>
 </head>
 <body class="flex flex-col">
-  <nav id="navOverrideBs" class="navbar navbar-expand-lg navbar-dark">
-    <div class="container" style="margin: 1rem 0;">
+  <nav id="navOverrideBs" class="navbar navbar-expand-lg navbar-dark nav-bg">
+    <div class="container" style="margin: .5rem 0;">
       <a class="navbar-brand" href="./">
         <img src="./assets/logo.png" alt="Logo" style="max-width: 200px">
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: flex-end;">
+      <div class="offcanvas-collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: flex-end;">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="./">Beranda <span class="sr-only">(current)</span></a>
@@ -35,57 +37,58 @@
     </div>
   </nav>
   <br>
-  <main>
-
-  <div class="container">
-  <header id = "main-content" class= "judul">
-    <h1 align = "center"> Form Order Online</h1>
-    <p align = "center">Anda dapat mengisi Form ini untuk Order</p>
-  </header>
-  <br>
-  <!--input-->
-  <div class="content">
-    <p>
-      <input type = "text" name = "nama" placeholder="Nama lengkap" size = 12 maxlength="28" >
-      <input type = "text" name = "no HP"placeholder="no HP" size = 12 maxlength="28">
-    </p>
-    <p>
-      <input type="email" required name = "email" placeholder="E-mail"size = 12 maxlength="28">
-    </p>
-    <p>
-      <input type = "text" name = "Alamat" placeholder="Alamat"size = 12 maxlength="28">
-    </p>
-    <div class="pilihanKota">
-      <label>kota:</label>
-      <select name="Kota">
-        <option value="Surabaya">Surabaya</option>
-        <option value="Malang">Malang</option>
-        <option value="Sidoarjo">Sidoarjo</option>
-        <option value="Blitar">Blitar</option>
-      </select>
+  <main style="padding-top: 9rem;">
+    <div class="container">
+      <header id = "main-content" class= "judul">
+        <h1 align = "center"> Form Order Online</h1>
+        <p align = "center">Anda dapat mengisi Form ini untuk Order</p>
+      </header>
+      <br>
+      <form class="" action="index.html" method="post">
+        <!--input-->
+        <div class="content">
+          <p>
+            <input type = "text" required name = "nama" placeholder="Nama lengkap" size = 12 maxlength="28" >
+            <input type = "text" required name = "no HP"placeholder="no HP" size = 12 maxlength="28">
+          </p>
+          <p>
+            <input type="email" required name = "email" placeholder="E-mail"size = 12 maxlength="28">
+          </p>
+          <p>
+            <input type = "text" required name = "Alamat" placeholder="Alamat"size = 12 maxlength="28">
+          </p>
+          <div class="pilihanKota">
+            <label>Kota:</label>
+            <select required name="Kota">
+              <option value="Surabaya">Surabaya</option>
+              <option value="Malang">Malang</option>
+              <option value="Sidoarjo">Sidoarjo</option>
+              <option value="Blitar">Blitar</option>
+            </select>
+          </div>
+          <br>
+          <div class="pilihanJenisOrder">
+            <label>Jenis Order:</label>
+            <select required name="Jenis" id="jenis">
+              <option value="20000">Keripik Pisang Original</option>
+              <option value="25000">Keripik Pisang Coklat</option>
+              <option value="25000">Keripik Pisang Balado</option>
+              <option value="10000">Keripik Tempe Original</option>
+              <option value="15000">Keripik Tempe Udang</option>
+              <option value="15000">Keripik Tempe Jagung Manis </option>
+              <option value="15000">Keripik Umbi Original </option>
+              <option value="20000">Keripik Umbi Ungu </option>
+              <option value="20000">Keripik Umbi Keju </option>
+            </select>
+          </div>
+          <p>
+            <input type = "number" id="jmlOrder" required name = "Jumlah Order" placeholder="Jumlah Order"size = 12 maxlength="28" value="0" min="0">
+            <span id="total"></span>
+          </p>
+          <input type="submit" required name="" value="Submit">
+        </div>
+      </form>
     </div>
-    <br>
-    <div class="pilihanJenisOrder">
-      <label>Jenis Order:</label>
-      <select name="Jenis" id="jenis">
-        <option value="20000">Keripik Pisang Original</option>
-        <option value="25000">Keripik Pisang Coklat</option>
-        <option value="25000">Keripik Pisang Balado</option>
-        <option value="10000">Keripik Tempe Original</option>
-        <option value="15000">Keripik Tempe Udang</option>
-        <option value="15000">Keripik Tempe Jagung Manis </option>
-        <option value="15000">Keripik Umbi Original </option>
-        <option value="20000">Keripik Umbi Ungu </option>
-        <option value="20000">Keripik Umbi Keju </option>
-      </select>
-    </div>
-    <p>
-
-      <input type = "number" id="jmlOrder" name = "Jumlah Order" placeholder="Jumlah Order"size = 12 maxlength="28" value="0" min="0">
-      <span id="total"></span>
-    </p>
-  </div>
-  </div>
   </main>
   <footer id="overrideBs">
     <div class="container">
@@ -117,16 +120,16 @@
     </div>
   </footer>
   <script type="text/javascript">
-    $("input[name='Jumlah Order']").change(function() {
-      $("#total").text("Rp. " + (parseInt($("input[name='Jumlah Order']").val()) *
-                       parseInt($("select[name='Jenis']").children("option:selected").val()))
-                      );
-    });
-    $("select[name='Jenis']").change(function() {
-      $("#total").text("Rp. " + (parseInt($("input[name='Jumlah Order']").val()) *
-                       parseInt($("select[name='Jenis']").children("option:selected").val()))
-                      );
-    });
+  $("input[name='Jumlah Order']").change(function() {
+    $("#total").text("Rp. " + (parseInt($("input[name='Jumlah Order']").val()) *
+      parseInt($("select[name='Jenis']").children("option:selected").val()))
+    );
+  });
+  $("select[name='Jenis']").change(function() {
+    $("#total").text("Rp. " + (parseInt($("input[name='Jumlah Order']").val()) *
+      parseInt($("select[name='Jenis']").children("option:selected").val()))
+    );
+  });
   </script>
 </body>
 </html>
