@@ -44,78 +44,119 @@
         <p align = "center">Anda dapat mengisi Form ini untuk Order</p>
       </header>
       <br>
-      <form class="" action="index.html" method="post">
+      <form class="form-order" action="" method="post" onsubmit="processOrder(event)">
         <!--input-->
-        <div class="content">
-          <p>
-            <input type = "text" required name = "nama" placeholder="Nama lengkap" size = 12 maxlength="28" >
-            <input type = "text" required name = "no HP"placeholder="No HP" size = 12 maxlength="28">
-          </p>
-          <p>
-            <input type="email" required name = "email" placeholder="E-mail"size = 12 maxlength="28">
-          </p>
-          <p>
-            <input type = "text" required name = "Alamat" placeholder="Alamat"size = 12 maxlength="28">
-          </p>
-          <div class="pilihanKota">
-            <label>Kota:</label>
-            <select required name="Kota">
-              <option value="Surabaya">Surabaya</option>
-              <option value="Malang">Malang</option>
-              <option value="Sidoarjo">Sidoarjo</option>
-              <option value="Blitar">Blitar</option>
-            </select>
-          </div>
-          <br>
-          <div class="pilihanJenisOrder">
-            <label>Jenis Order:</label>
-            <select required name="Jenis" id="jenis">
-              <option value="20000">Keripik Pisang Original</option>
-              <option value="25000">Keripik Pisang Coklat</option>
-              <option value="25000">Keripik Pisang Balado</option>
-              <option value="10000">Keripik Tempe Original</option>
-              <option value="15000">Keripik Tempe Udang</option>
-              <option value="15000">Keripik Tempe Jagung Manis </option>
-              <option value="15000">Keripik Umbi Original </option>
-              <option value="20000">Keripik Umbi Ungu </option>
-              <option value="20000">Keripik Umbi Keju </option>
-            </select>
-          </div>
-          <p>
-            <input type = "number" id="jmlOrder" required name = "Jumlah Order" placeholder="Jumlah Order"size = 12 maxlength="28" value="0" min="0">
-            <span id="total"></span>
-          </p>
-          <input type="submit" required name="" value="Beli">
-        </div>
+          <table class="table-input">
+            <tr>
+              <td>
+                <label for="">Nama:</label>
+                <input type = "text" required name = "nama" placeholder="Nama lengkap" size = 12 maxlength="28" >
+              </td>
+              <td>
+                <label for="">No HP:</label>
+                <input type = "text" required name = "no HP"placeholder="No HP" size = 12 maxlength="28">
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <label for="">Email:</label>
+                <input type="email" required name = "email" placeholder="E-mail"size = 12 maxlength="28">
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <label for="">Alamat:</label>
+                <input type = "text" required name = "Alamat" placeholder="Alamat"size = 12 maxlength="28">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Kota:</label>
+                <select required name="Kota">
+                  <option value="Surabaya">Surabaya</option>
+                  <option value="Malang">Malang</option>
+                  <option value="Sidoarjo">Sidoarjo</option>
+                  <option value="Blitar">Blitar</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Jenis Order:</label>
+                <select required name="Jenis" id="jenis">
+                  <option value="20000">Keripik Pisang Original</option>
+                  <option value="25000">Keripik Pisang Coklat</option>
+                  <option value="25000">Keripik Pisang Balado</option>
+                  <option value="10000">Keripik Tempe Original</option>
+                  <option value="15000">Keripik Tempe Udang</option>
+                  <option value="15000">Keripik Tempe Jagung Manis </option>
+                  <option value="15000">Keripik Umbi Original </option>
+                  <option value="20000">Keripik Umbi Ungu </option>
+                  <option value="20000">Keripik Umbi Keju </option>
+                </select>
+              </td>
+              <td>
+                <label for="">Jumlah:</label>
+                <input type = "number" id="jmlOrder" required name = "Jumlah Order" placeholder="Jumlah Order"size = 12 maxlength="28" value="0" min="0">
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <label for="">Total:</label>
+                <span id="total"></span>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <input type="submit" class="btn-beli" required name="" value="Beli">
+              </td>
+            </tr>
+          </table>
       </form>
+      <div class="order-process" style="display:none;">
+        <h1>Pesanan Sedang Diproses</h1>
+        <p>Kami telah menerima pesanan Anda. Mohon tunggu konfirmasi melalui Email.</p>
+        <p>Terima kasih telah membeli produk kami!</p>
+        <a href="../" class="">Kembali ke Beranda</a>
+      </div>
     </div>
   </main>
   <footer id="overrideBs">
-    <div class="container">
+    <div class="container" style="margin-bottom: 1rem;">
       <a href="./">
         <img src="./assets/logo.png" style="max-width: 150px" alt="Logo">
       </a>
     </div>
     <div class="container flex flex-row">
-      <div class="col-md">
-        <h4>Kontak</h4>
+      <div class="col-sm">
+        <h4 style="color: #fccc92">Kontak</h4>
         <ul>
           <li>
-            <a href="#">0829819291</a>
+            <b>
+              Call/SMS
+            </b>
+            <p>
+              081555368454
+              <br>
+              08165442327
+            </p>
           </li>
           <li>
-            <a href="#">0829819291</a>
-          </li>
-          <li>
-            <a href="#">0829819291</a>
+            <b>
+              WhatsApp
+            </b>
+            <p>
+              082334426378
+            </p>
           </li>
         </ul>
       </div>
       <div class="col-md">
-        test2
+        <label for="" style="font-size: 1.2rem; color: #fccc92;">Dapatkan Berita dan Penawaran</label>
+        <input type="email" name="" placeholder="Email" style="background: none; border: 2px solid white; color: white; width:50%;" value="">
       </div>
       <div class="col-md">
-        <span>Made with &#10084; by Kelompok 3 DDAP SI-E</span>
+        <p>Made with &#10084; by Kelompok 3 DDAP SI-E</p>
       </div>
     </div>
   </footer>
@@ -130,6 +171,13 @@
       parseInt($("select[name='Jenis']").children("option:selected").val()))
     );
   });
-  </script>
+
+  function processOrder(ev) {
+    ev.preventDefault();
+    $("header#main-content").css('display', 'none');
+    $("form.form-order").css('display', 'none');
+    $("div.order-process").css('display', 'block');
+  }
+</script>
 </body>
 </html>
